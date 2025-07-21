@@ -1,0 +1,10 @@
+# render.yaml
+services:
+  - type: web
+    name: django-aot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn ansd.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: ansd.settings
