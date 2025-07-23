@@ -98,13 +98,42 @@
 <!-- Body -->
     <body>
         <div class="container">
-        <div class="p-5 mb-2 .bg-light text-secondary-emphasis">
-        <h1 style="font-size: 50px; text-align: center; padding: 20px; color: #e7d9d9;"><b><b>Welcome</b><b></h1>
+        <h1 style="font-size: 50px; text-align: center; padding: 20px; color: #e7d9d9; margin-top: 35px; margin-bottom: auto;"><b><b>Welcome</b><b></h1>
         </div>
-            {% load static %}
-            <img src="{% static 'aotbanner.jpg' %}" style="display: block; margin: 0 auto; border-radius: 11%; width: 1000px; " alt="attack on Titan">
-            <br>
-            </div>
+
+        <!-- Sliding Images -->
+
+<div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {% load static %}
+      <img src="{% static 'C:\Users\Microsoft\Desktop\django\ansd\static\Aots.jpg' %}" class="d-block w-100" style="display: block; margin: 0 auto; height:750px; width: 800px; border-radius: 2%;" alt="attack on Titan">
+    </div>
+    <div class="carousel-item">
+      {% load static %}
+      <img src="{% static 'C:\Users\Microsoft\Desktop\django\ansd\static\aotwallpaper.jpg' %}" class="d-block w-100" style="display: block; margin: 0 auto; height: 750px; width: 800px; border-radius: 2%;" alt="attack on Titan">
+    </div>
+    <div class="carousel-item">
+      {% load static %}
+      <img src="{% static 'C:\Users\Microsoft\Desktop\django\ansd\static\levi.jpg' %}" class="d-block w-100" style="display: block; margin: 0 auto; height: 750px; width: 800px; border-radius: 2%;" alt="attack on Titan">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
             <!-- Bootstrap -->
         <!-- <a href="home">Go To Homepage</a> -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
