@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +27,6 @@ urlpatterns = [
     path('characters', views.characters, name="characters"),
     path('about', views.about, name="about"),
     path('contact', views.contact, name="contact"),
+    path('contact/', include('contact.urls')),  # <-- App ke urls ko yahan link karo
 
 ]
