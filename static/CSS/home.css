@@ -1,0 +1,38 @@
+.body {
+    background-color: #1c1c1e;
+    color: #f8f9fa;
+   } 
+
+   .navbar-nav .nav-link:hover {
+    color: #ffc107;
+    transition: 0.3s;
+  }
+
+  .navbar-brand {
+    letter-spacing: 1px;
+}
+
+.aot-intro {
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.aot-intro h1 {
+  font-size: 3em;
+  color: #ffffff; /* deep red like AOT logo */
+  margin-bottom: 15px;
+}
+
+.aot-intro p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}

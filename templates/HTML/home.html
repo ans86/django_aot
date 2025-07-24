@@ -14,27 +14,11 @@
     <title>AOT Home</title>
 
     <!-- Favicon -->
+     <link rel="stylesheet" href="static/CSS/home.css">
     <link rel="icon" type="image/x-icon" href="https://live.staticflickr.com/7410/12272594713_fb1db15882_z.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   </head>
-
-  <!-- Style -->
-    <style>
-   body {
-    background-color: #1c1c1e;
-    color: #f8f9fa;
-   } 
-
-   .navbar-nav .nav-link:hover {
-    color: #ffc107;
-    transition: 0.3s;
-  }
-
-  .navbar-brand {
-    letter-spacing: 1px;
-}
-   </style>
-
+  
   <!-- Navbar -->
    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
   <div class="container-fluid">
@@ -100,32 +84,34 @@
 </nav>
 
   <!-- Body -->
+   <div class="body">
   <body>
     <div class="container">
     <div class="p-5 mb-2 .bg-lighttext-secondary-emphasis">
-    <h1 style="font-size: 50px;text-align: center; padding: 20px;">
+    <h1 style="font-size: 50px;text-align: center; padding: 10px; margin-bottom: 0.1px;">
          <b><b>Attack on Titan</b></b></h1>
          </div>
          {% load static %}
-         <img src="{% static 'aot.jpg' %}" style="display: block; margin: 0 auto; border-radius: 11%; width: 300px; height: auto; " alt="attack on Titan">
+         <img src="{% static 'aots.jpg' %}" style="display: block; margin: 0 auto; border-radius: 1%; margin-top: 0.1px; " alt="attack on Titan">
          <br>
          
          <!-- Info -->
-          <p style="width: 70%; font-size: large; display: block; margin: 0 auto;"><b>Attack on Titan (Japanese: 進撃の巨人, Hepburn: Shingeki no Kyojin; lit. 'The Advancing Giant') is a Japanese manga series written 
-          and illustrated by Hajime Isayama. Set in a world where humanity is forced to live in cities surrounded by three enormous walls that 
-          protect them from gigantic man-eating humanoids referred to as Titans, the story follows Eren Yeager, an adolescent boy who vows to
-           exterminate the Titans after they bring about the destruction of his hometown and the death of his mother. It was serialized in 
-           Kodansha's monthly magazine Bessatsu Shōnen Magazine from September 2009 to April 2021, with its chapters collected in 34 tankōbon 
-           volumes.
+          <div class="text-box">
+          <section class="aot-intro">
+  <h1><b>Attack on Titan (進撃の巨人)</b></h1>
+  <p>
+    Humanity teeters on the brink of extinction, trapped behind massive walls to survive against terrifying, man-eating Titans. 
+    In this brutal world, young Eren Yeager witnesses the fall of his city and vows to destroy every last Titan. 
+    What begins as a fight for survival quickly spirals into a deep mystery about power, betrayal, and freedom itself.
+    <br><br>
+    Adapted from Hajime Isayama’s best-selling manga, <strong>Attack on Titan</strong> is a globally acclaimed anime epic filled with breathtaking action, rich storytelling, and emotional intensity.
+  </p>
+</section>
 
-An anime television series was produced by Wit Studio (seasons 1–3) and MAPPA (season 4). A 25-episode first season was broadcast from
- April to September 2013, followed by a 12-episode second season broadcast from April to June 2017. A 22-episode third season was broadcast 
- in two parts, with the first 12 episodes airing from July to October 2018 and the last 10 episodes airing from April to July 2019. A fourth
-  and final season premiered in December 2020, airing 16 episodes in its first part. A second part consisting of 12 episodes aired from January 
-  to April 2022, and the third and fourth parts aired in two specials; the first premiered in March 2023, and the second premiered in November
-   2023.</b></p>
-         
          </div>
+         </div>
+         </div>
+        
 <!-- End -->
 
          <!-- <a href="http://127.0.0.1:8000/about"><b><b>About</b></b></a> -->
