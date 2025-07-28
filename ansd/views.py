@@ -2,19 +2,17 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'HTML/800.html')
+    return render(request, 'aot.html')
 
 def home(request):
-    return render(request, 'HTML/home.html')
+    return render(request, 'home.html')
 
 def seasons(request):
-    return render(request, 'HTML/seasons.html')
+    return render(request, 'seasons.html')
 
 def characters(request):
-    return render(request, 'HTML/characters.html')
+    return render(request, 'characters.html')
 
 def about(request):
-    return render(request, 'HTML/about.html')
+    return render(request, 'about.html')
 
-def contact(request):
-    return render(request, 'HTML/contact.html')

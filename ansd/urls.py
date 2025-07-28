@@ -26,7 +26,6 @@ urlpatterns = [
     path('seasons', views.seasons, name="seasons"),
     path('characters', views.characters, name="characters"),
     path('about', views.about, name="about"),
-    path('contact', views.contact, name="contact"),
-    path('contact/', include('contact.urls')),  # <-- App ke urls ko yahan link karo
-
+    # Contact app urls
+    path('contact/', include('contact.urls')),
 ]

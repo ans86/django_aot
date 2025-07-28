@@ -1,21 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render , HttpResponse
+from contact.models import Contact
 
-# Create your views here.
-from django.shortcuts import render
 
-# Create your views here.
-from django.shortcuts import render
-from .models import Contact
-
-def contact_view(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
-
-        # Save to database
-        Contact.objects.create(name=name, email=email, message=message)
-
-        return render(request, 'thanks.html')  # Show thank you page
-
-    return render(request, 'contact.html')  # Show form again if not POST
+def contact(request):
+    if request.method=="POST":
+        name=request.POST['name']
+        email=request.POST['email']
+        meassage=request.POST['message']
+        contact = Contact(name=name, email=email, message=meassage)
+        contact.save()
+    return render(request, "contact.html")
