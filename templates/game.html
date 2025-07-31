@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AOT Contact</title>
     <link rel="icon" type="image/x-icon" href="https://live.staticflickr.com/7410/12272594713_fb1db15882_z.jpg">
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/game.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   </head>
 
@@ -28,7 +30,7 @@
    </style>
     <body>
        <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top mb-20">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top mb-60">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'aot' %}"><b><b>AOT</b></b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,15 +95,16 @@
     </div>
   </div>
 </nav>
-    <div class="p-5 mt-0.1 bg-secondary-subtle text-secondary-emphasis">
-    <h1 style="font-size: 50px;text-align: center; padding: 20px;">
+    <!-- <div class="p-5 mt-0.1 bg-secondary-subtle text-secondary-emphasis">
+     <h1 style="font-size: 50px;text-align: center; padding: 20px;">
          <b><b>AOT Contact</b></b></h1>
-         </div>
+         </div> -->
          <div class="d-flex justify-content-center align-item-center">
-          <!-- HUZAIFA FORM -->
-<form method="post" action="{% url 'game' %}">
+
+          <!-- FORM -->
+           <div class="form.custom-form">
+          <form class="custom-form" style="margin-top: 180px;" method="post" action="{% url 'game' %}">
  {% csrf_token %}
-  <!-- your fields here -->
   <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Name</label>
   <input name="name" type="name" class="form-control"  placeholder="Name">
@@ -110,29 +113,12 @@
   <input name="image" class="form-control" type="file" id="formFile">
 </div>
 <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-  <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <label for="exampleFormControlTextarea1" class="form-label">Detail</label>
+  <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 130px;"></textarea>
 </div>
 <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
-
-          <!-- <form method="post" action="{% url 'game' %}">
-  {% csrf_token %}
-  <div class="mb-3" style="width: 400px;">
-    <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input name="name" type="name" class="form-control" aria-describedby="name" placeholder="Name" >
-  </div>
-  <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input name="email" type="email" class="form-control" id="enmail" placeholder="name@example.com">
 </div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-  <textarea name="message"  class="form-control" placeholder="Type your message here..." id="message" rows="3" style="height: 136px;"></textarea>
-</div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form> -->
 </div>
 <br>
 <br>
