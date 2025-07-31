@@ -1,12 +1,10 @@
 from django.db import models
 
 class Game(models.Model):
-     name= models.CharField(max_length=255)
-     image=models.ImageField( upload_to=None, height_field=None, width_field=None, max_length=None)
-     message = models.TextField()
-     timeStamp = models.DateTimeField(auto_now_add=True)
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='game_images/', null=True, blank=True)
+    message = models.TextField()
+    timeStamp = models.DateTimeField(auto_now_add=True)
 
-
-     
-     def _str_(self):
-          return "Message from " + self.name + ' - ' + self.emaila
+def __str__(self):
+    return f"Game: {self.name}"
