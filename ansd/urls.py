@@ -21,11 +21,13 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name="index"),
-    path('home', views.home, name="home"),
-    path('seasons', views.seasons, name="seasons"),
-    path('characters', views.characters, name="characters"),
-    path('about', views.about, name="about"),
+    path('', views.index, name='index'),
+    path('aot/', views.aot_view, name='aot'),
+    path('home', views.home_view, name="home"),
+    path('seasons', views.seasons_view, name="seasons"),
+    path('characters/', views.characters_view, name="characters"),
+    path('about/', views.about_view, name="about"),
     # Contact app urls
     path('contact/', include('contact.urls')),
+    path('game/', include('game.urls')),
 ]

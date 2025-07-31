@@ -4,15 +4,18 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'aot.html')
 
-def home(request):
-    return render(request, 'home.html')
+def aot_view(request):
+#  return HttpResponse("Hello, World!")
+     return render(request, 'aot.html')
 
-def seasons(request):
-    return render(request, 'seasons.html')
+def home_view(request):
+     return render(request, 'home.html')
 
-def characters(request):
-    return render(request, 'characters.html')
+def seasons_view(request):
+     return render(request, 'seasons.html')
 
-def about(request):
-    return render(request, 'about.html')
+def characters_view(request):
+     return render(request, 'characters.html')
 
+def about_view(request):
+     return render(request, 'about.html')
