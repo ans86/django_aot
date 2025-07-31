@@ -98,22 +98,28 @@
          <b><b>AOT Contact</b></b></h1>
          </div>
          <div class="d-flex justify-content-center align-item-center">
-<form method="post" action="{% url 'contact' %}">
+<!-- Second Contact Form -->
+<form style="margin-top: 90px;" method="post" action="{% url 'contact' %}">
   {% csrf_token %}
   <div class="mb-3" style="width: 400px;">
-    <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input name="name" type="name" class="form-control" aria-describedby="username" placeholder="Username" >
+    <label for="exampleInputEmail1" class="form-label"><b>Name</b></label>
+    <input name="name" type="name" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name" >
+  </div>
+   <div class="mb-3" style="width: 400px;">
+    <label for="exampleInputEmail1" class="form-label"><b>Username</b></label>
+    <input name="username" type="text" class="form-control" id="username" placeholder="Enter Username" required>
   </div>
   <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <label for="exampleFormControlInput1" class="form-label"><b>Email address</b></label>
   <input name="email" type="email" class="form-control" id="enmail" placeholder="name@example.com">
 </div>
 <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+  <label for="exampleFormControlTextarea1" class="form-label"><b>Message</b></label>
   <textarea name="message"  class="form-control" placeholder="Type your message here..." id="message" rows="3" style="height: 136px;"></textarea>
 </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
 </div>
 <br>
 <br>
