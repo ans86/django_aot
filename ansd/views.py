@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from game.models import Game
 
 def index(request):
     return render(request, 'aot.html')
@@ -9,7 +10,12 @@ def aot_view(request):
      return render(request, 'aot.html')
 
 def home_view(request):
-     return render(request, 'home.html')
+    games = Game.objects.all()
+    context = {
+        "games": games
+    }
+    return render(request, 'home.html', context)
+
 
 def seasons_view(request):
      return render(request, 'seasons.html')

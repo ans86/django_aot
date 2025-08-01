@@ -14,13 +14,13 @@
     <title>AOT Home</title>
 
     <!-- Favicon -->
-     <link rel="stylesheet" href="static/CSS/home.css">
+     <link rel="stylesheet" href="static/css/home.css">
     <link rel="icon" type="image/x-icon" href="https://live.staticflickr.com/7410/12272594713_fb1db15882_z.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   </head>
   
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top mb-20">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top mb-90">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'aot' %}"><b><b>AOT</b></b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,39 +85,61 @@
     </div>
   </div>
 </nav>
-
+<div class=".body">
   <!-- Body -->
-   <div class="body">
   <body>
-    <div class="container">
-    <div class="p-5 mb-2 .bg-lighttext-secondary-emphasis">
-    <h1 style="font-size: 50px;text-align: center; padding: 10px; margin-bottom: 0.1px;">
-         <b><b>Attack on Titan</b></b></h1>
-         </div>
-         {% load static %}
-         <img src="{% static 'aots.jpg' %}" style="display: block; margin: 0 auto; border-radius: 1%; margin-top: 0.1px; " alt="attack on Titan">
-         <br>
-         
-         <!-- Info -->
-          <div class="text-box">
-          <section class="aot-intro">
-  <h1><b>Attack on Titan (進撃の巨人)</b></h1>
-  <p>
-    Humanity teeters on the brink of extinction, trapped behind massive walls to survive against terrifying, man-eating Titans. 
-    In this brutal world, young Eren Yeager witnesses the fall of his city and vows to destroy every last Titan. 
-    What begins as a fight for survival quickly spirals into a deep mystery about power, betrayal, and freedom itself.
-    <br><br>
-    Adapted from Hajime Isayama’s best-selling manga, <strong>Attack on Titan</strong> is a globally acclaimed anime epic filled with breathtaking action, rich storytelling, and emotional intensity.
-  </p>
-</section>
+    <!-- CSS -->
+<style>
+    .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
 
-         </div>
-         </div>
-         </div>
+.card-img-top {
+  border-bottom: 1px solid #444;
+}
+
+body {
+    padding-top: 80px;
+  }
+  body {
+  padding-top: 80px;
+  background-color: #f8f9fa;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+
+</style>
+<!-- Loop -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    {% for game in games %}
+      <div class="col-md-4 d-flex align-items-stretch mb-4">
+        <p>{{ game.detail }}</p>
+
+        <div class="card bg-dark text-white shadow rounded-4 border-0" style="min-height: 500px; transition: transform 0.3s ease;">
+          <img src="{{ game.image.url }}" class="card-img-top rounded-top-4" alt="{{ game.name }}" style="height: 250px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ game.name }}</h5>
+            <p class="card-text text-light" style="flex-grow: 1;">{{ game.message|truncatewords:25 }}</p>
+            <a href="#" class="btn btn-outline-light mt-auto">Play Now</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
         
 <!-- End -->
 
          <!-- <a href="http://127.0.0.1:8000/about"><b><b>About</b></b></a> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   </body>
+  </div>
 </html>

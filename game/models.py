@@ -2,7 +2,7 @@ from django.db import models
 
 class Game(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='game_images/', null=True, blank=True)
+    image = models.ImageField(upload_to='images/', default='default.jpg')
     message = models.TextField()
     timeStamp = models.DateTimeField(auto_now_add=True)
 
